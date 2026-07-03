@@ -1,10 +1,9 @@
 {
   "name": "claude-notify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "macOS desktop notifications for Claude Code: task done, permission needed, and waiting-for-input alerts. Click a notification to jump back to the terminal or IDE running Claude.",
   "author": {
     "name": "Rithy",
     "url": "https://github.com/rithyKabir"
-  },
-  "hooks": "./hooks/hooks.json"
+  }
 }

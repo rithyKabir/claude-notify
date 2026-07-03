@@ -1,0 +1,14 @@
+{
+  "name": "claude-notify",
+  "owner": {
+    "name": "Rithy"
+  },
+  "description": "macOS desktop notifications for Claude Code.",
+  "plugins": [
+    {
+      "name": "claude-notify",
+      "source": "./",
+      "description": "Desktop notifications when Claude finishes a task, needs permission, or is waiting for input. Click to jump back to your terminal/IDE."
+    }
+  ]
+}

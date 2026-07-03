@@ -1,0 +1,37 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "PATH=\"$PATH:/opt/homebrew/bin:/usr/local/bin\"; d=$(jq -r '.cwd // empty'); terminal-notifier -title 'Claude Code' -subtitle \"${d##*/}\" -message 'Claude task is done' -sound Glass -activate \"${__CFBundleIdentifier:-com.apple.Terminal}\" 2>/dev/null || true",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "PATH=\"$PATH:/opt/homebrew/bin:/usr/local/bin\"; t=$(jq -r '.tool_name // \"a tool\"'); terminal-notifier -title 'Claude Code — needs permission' -message \"Waiting for your approval: $t\" -sound Ping -activate \"${__CFBundleIdentifier:-com.apple.Terminal}\" 2>/dev/null || true",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "PATH=\"$PATH:/opt/homebrew/bin:/usr/local/bin\"; m=$(jq -r '.message // \"Claude needs your attention\"'); terminal-notifier -title 'Claude Code — waiting' -message \"$m\" -sound Ping -activate \"${__CFBundleIdentifier:-com.apple.Terminal}\" 2>/dev/null || true",
+            "async": true
+          }
+        ]
+      }
+    ]
+  }
+}

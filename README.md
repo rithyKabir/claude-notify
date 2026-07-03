@@ -13,6 +13,8 @@ Clicking a notification focuses the app Claude Code is running in (Terminal, iTe
 ## Requirements
 
 macOS with [Homebrew](https://brew.sh). Works on Apple Silicon and Intel.
+Installed terminal-notifier.
+Allow permission for teminal-notifier from settings to send notification.
 
 ## Install
 
